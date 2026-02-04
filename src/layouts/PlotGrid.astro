@@ -70,7 +70,7 @@ const { projectName, subpageName, plots, backLink } = Astro.props;
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
-            <option value="4" selected>4</option>
+            <option value="4">4</option>
             <option value="5">5</option>
             <option value="6">6</option>
           </select>
@@ -91,4 +91,18 @@ const { projectName, subpageName, plots, backLink } = Astro.props;
   </div>
 
   <script type="module" src="/scripts/plot-grid.js" is:inline></script>
+  <script>
+    // Set default columns based on screen size
+    const pdfGridColsSelect = document.getElementById('pdf-grid-cols');
+    if (pdfGridColsSelect) {
+      const isMobile = window.innerWidth < 768;
+      pdfGridColsSelect.value = isMobile ? '1' : '4';
+      
+      // Update on window resize
+      window.addEventListener('resize', () => {
+        const newIsMobile = window.innerWidth < 768;
+        pdfGridColsSelect.value = newIsMobile ? '1' : '4';
+      });
+    }
+  </script>
 </Base>

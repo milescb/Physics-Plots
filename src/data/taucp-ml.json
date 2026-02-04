@@ -14,6 +14,30 @@
           "description": "Track Feature Inputs",
           "axes": { "x": "vars", "y": "Events" },
           "files": [
+            "/plots/taucp-ml/inputs/track_feature_00_dEta.png",
+            "/plots/taucp-ml/inputs/track_feature_01_dPhi.png",
+            "/plots/taucp-ml/inputs/track_feature_02_trackPt_log.png",
+            "/plots/taucp-ml/inputs/track_feature_03_theta.png",
+            "/plots/taucp-ml/inputs/track_feature_04_numberOfInnermostPixelLayerHits.png",
+            "/plots/taucp-ml/inputs/track_feature_05_numberOfPixelHits.png",
+            "/plots/taucp-ml/inputs/track_feature_06_numberOfPixelSharedHits.png",
+            "/plots/taucp-ml/inputs/track_feature_07_numberOfPixelDeadSensors.png",
+            "/plots/taucp-ml/inputs/track_feature_08_numberOfSCTHits.png",
+            "/plots/taucp-ml/inputs/track_feature_09_numberOfSCTSharedHits.png",
+            "/plots/taucp-ml/inputs/track_feature_10_numberOfSCTDeadSensors.png",
+            "/plots/taucp-ml/inputs/track_feature_11_numberOfTRTHighThresholdHits.png",
+            "/plots/taucp-ml/inputs/track_feature_12_numberOfTRTHits.png",
+            "/plots/taucp-ml/inputs/track_feature_13_nPixHits.png",
+            "/plots/taucp-ml/inputs/track_feature_14_nSCTHits.png",
+            "/plots/taucp-ml/inputs/track_feature_15_nSiHits.png",
+            "/plots/taucp-ml/inputs/track_feature_16_nIBLHitsAndExp.png",
+            "/plots/taucp-ml/inputs/track_feature_17_expectInnermostPixelLayerHit.png",
+            "/plots/taucp-ml/inputs/track_feature_18_expectNextToInnermostPixelLayerHit.png",
+            "/plots/taucp-ml/inputs/track_feature_19_numberOfContribPixelLayers.png",
+            "/plots/taucp-ml/inputs/track_feature_20_numberOfPixelHoles.png",
+            "/plots/taucp-ml/inputs/track_feature_21_numberOfSCTHoles.png",
+            "/plots/taucp-ml/inputs/track_feature_22_d0_old.png",
+            "/plots/taucp-ml/inputs/track_feature_23_qOverP.png"
           ]
         },
         {
@@ -22,6 +46,16 @@
           "description": "Cluster Feature Inputs",
           "axes": { "x": "vars", "y": "Events" },
           "files": [
+            "/plots/taucp-ml/inputs/cluster_feature_00_cls_dEta_Δη.png",
+            "/plots/taucp-ml/inputs/cluster_feature_01_cls_dPhi_Δφ.png",
+            "/plots/taucp-ml/inputs/cluster_feature_02_cls_et_log_pT.png",
+            "/plots/taucp-ml/inputs/cluster_feature_03_cls_e_log_E.png",
+            "/plots/taucp-ml/inputs/cluster_feature_04_cls_SECOND_R.png",
+            "/plots/taucp-ml/inputs/cluster_feature_05_cls_SECOND_LAMBDA.png",
+            "/plots/taucp-ml/inputs/cluster_feature_06_cls_FIRST_ENG_DENS.png",
+            "/plots/taucp-ml/inputs/cluster_feature_07_cls_EM_PROBABILITY.png",
+            "/plots/taucp-ml/inputs/cluster_feature_08_cls_CENTER_MAG.png",
+            "/plots/taucp-ml/inputs/cluster_feature_09_cls_CENTER_LAMBDA.png"
           ]
         },
         {
@@ -30,6 +64,30 @@
           "description": "Track features split by decay mode",
           "axes": { "x": "vars", "y": "Events" },
           "files": [
+            "/plots/taucp-ml/inputs/track_decay_mode_00_dEta.png",
+            "/plots/taucp-ml/inputs/track_decay_mode_01_dPhi.png",
+            "/plots/taucp-ml/inputs/track_decay_mode_02_trackPt_log.png",
+            "/plots/taucp-ml/inputs/track_decay_mode_03_theta.png",
+            "/plots/taucp-ml/inputs/track_decay_mode_04_numberOfInnermostPixelLayerHits.png",
+            "/plots/taucp-ml/inputs/track_decay_mode_05_numberOfPixelHits.png",
+            "/plots/taucp-ml/inputs/track_decay_mode_06_numberOfPixelSharedHits.png",
+            "/plots/taucp-ml/inputs/track_decay_mode_07_numberOfPixelDeadSensors.png",
+            "/plots/taucp-ml/inputs/track_decay_mode_08_numberOfSCTHits.png",
+            "/plots/taucp-ml/inputs/track_decay_mode_09_numberOfSCTSharedHits.png",
+            "/plots/taucp-ml/inputs/track_decay_mode_10_numberOfSCTDeadSensors.png",
+            "/plots/taucp-ml/inputs/track_decay_mode_11_numberOfTRTHighThresholdHits.png",
+            "/plots/taucp-ml/inputs/track_decay_mode_12_numberOfTRTHits.png",
+            "/plots/taucp-ml/inputs/track_decay_mode_13_nPixHits.png",
+            "/plots/taucp-ml/inputs/track_decay_mode_14_nSCTHits.png",
+            "/plots/taucp-ml/inputs/track_decay_mode_15_nSiHits.png",
+            "/plots/taucp-ml/inputs/track_decay_mode_16_nIBLHitsAndExp.png",
+            "/plots/taucp-ml/inputs/track_decay_mode_17_expectInnermostPixelLayerHit.png",
+            "/plots/taucp-ml/inputs/track_decay_mode_18_expectNextToInnermostPixelLayerHit.png",
+            "/plots/taucp-ml/inputs/track_decay_mode_19_numberOfContribPixelLayers.png",
+            "/plots/taucp-ml/inputs/track_decay_mode_20_numberOfPixelHoles.png",
+            "/plots/taucp-ml/inputs/track_decay_mode_21_numberOfSCTHoles.png",
+            "/plots/taucp-ml/inputs/track_decay_mode_22_d0_old.png",
+            "/plots/taucp-ml/inputs/track_decay_mode_23_qOverP.png"
           ]
         },
         {
@@ -38,6 +96,16 @@
           "description": "Cluster features split by decay mode",
           "axes": { "x": "vars", "y": "Events" },
           "files": [
+            "/plots/taucp-ml/inputs/cluster_decay_mode_00_cls_dEta_Δη.png",
+            "/plots/taucp-ml/inputs/cluster_decay_mode_01_cls_dPhi_Δφ.png",
+            "/plots/taucp-ml/inputs/cluster_decay_mode_02_cls_et_log_pT.png",
+            "/plots/taucp-ml/inputs/cluster_decay_mode_03_cls_e_log_E.png",
+            "/plots/taucp-ml/inputs/cluster_decay_mode_04_cls_SECOND_R.png",
+            "/plots/taucp-ml/inputs/cluster_decay_mode_05_cls_SECOND_LAMBDA.png",
+            "/plots/taucp-ml/inputs/cluster_decay_mode_06_cls_FIRST_ENG_DENS.png",
+            "/plots/taucp-ml/inputs/cluster_decay_mode_07_cls_EM_PROBABILITY.png",
+            "/plots/taucp-ml/inputs/cluster_decay_mode_08_cls_CENTER_MAG.png",
+            "/plots/taucp-ml/inputs/cluster_decay_mode_09_cls_CENTER_LAMBDA.png"
           ]
         }
       ]
@@ -48,27 +116,91 @@
       "plots": 
       [
         {
-          "id": "tauid",
-          "title": "TauID",
-          "description": "TauID output distributions and ROC curves",
-          "axes": { "x": "vars", "y": "Events" },
+          "id": "tauid-roc",
+          "title": "TauID ROC Curves",
+          "description": "TauID ROC curves and performance",
+          "axes": { "x": "False Positive Rate", "y": "True Positive Rate" },
           "files": [
+            "/plots/taucp-ml/results/roc_curve_tau.png",
+            "/plots/taucp-ml/results/roc_curve_qcd.png",
+            "/plots/taucp-ml/results/tau_vs_qcd_roc.png",
+            "/plots/taucp-ml/results/tau_vs_qcd_rejection.png"
           ]
         },
         {
-          "id": "eleveto",
-          "title": "Electron Veto",
-          "description": "Electron veto distributions and ROC curves",
-          "axes": { "x": "vars", "y": "Events" },
+          "id": "tauid-scores",
+          "title": "TauID Score Distributions",
+          "description": "TauID output score distributions",
+          "axes": { "x": "Score", "y": "Events" },
           "files": [
+            "/plots/taucp-ml/results/score_distribution_tau.png",
+            "/plots/taucp-ml/results/score_distribution_qcd.png"
           ]
         },
         {
-          "id": "decay-mode",
-          "title": "Decay Mode",
-          "description": "Decay mode confusion matrices and ROC curves",
-          "axes": { "x": "vars", "y": "Events" },
+          "id": "tauid-confusion",
+          "title": "TauID Confusion Matrices",
+          "description": "TauID classification confusion matrices",
+          "axes": { "x": "True Label", "y": "Predicted Label" },
           "files": [
+            "/plots/taucp-ml/results/confusion_matrix_counts.png",
+            "/plots/taucp-ml/results/confusion_matrix_normalized.png"
+          ]
+        },
+        {
+          "id": "eleveto-roc",
+          "title": "Electron Veto ROC Curves",
+          "description": "Electron veto ROC curves and performance",
+          "axes": { "x": "False Positive Rate", "y": "True Positive Rate" },
+          "files": [
+            "/plots/taucp-ml/results/roc_curve_electron.png",
+            "/plots/taucp-ml/results/electron_vs_qcd_roc.png"
+          ]
+        },
+        {
+          "id": "eleveto-scores",
+          "title": "Electron Veto Score Distributions",
+          "description": "Electron veto output score distributions",
+          "axes": { "x": "Score", "y": "Events" },
+          "files": [
+            "/plots/taucp-ml/results/electron_vs_qcd_scores.png",
+            "/plots/taucp-ml/results/score_distribution_electron.png"
+          ]
+        },
+        {
+          "id": "decay-mode-roc",
+          "title": "Decay Mode ROC Curves",
+          "description": "Decay mode classification ROC curves by decay mode",
+          "axes": { "x": "False Positive Rate", "y": "True Positive Rate" },
+          "files": [
+            "/plots/taucp-ml/results/decay_mode_roc_1p0n.png",
+            "/plots/taucp-ml/results/decay_mode_roc_1p1n.png",
+            "/plots/taucp-ml/results/decay_mode_roc_1pXn.png",
+            "/plots/taucp-ml/results/decay_mode_roc_3p0n.png",
+            "/plots/taucp-ml/results/decay_mode_roc_3pXn.png"
+          ]
+        },
+        {
+          "id": "decay-mode-scores",
+          "title": "Decay Mode Score Distributions",
+          "description": "Decay mode output score distributions by decay mode",
+          "axes": { "x": "Score", "y": "Events" },
+          "files": [
+            "/plots/taucp-ml/results/decay_mode_score_distribution_1p0n.png",
+            "/plots/taucp-ml/results/decay_mode_score_distribution_1p1n.png",
+            "/plots/taucp-ml/results/decay_mode_score_distribution_1pXn.png",
+            "/plots/taucp-ml/results/decay_mode_score_distribution_3p0n.png",
+            "/plots/taucp-ml/results/decay_mode_score_distribution_3pXn.png"
+          ]
+        },
+        {
+          "id": "decay-mode-confusion",
+          "title": "Decay Mode Confusion Matrices",
+          "description": "Decay mode classification confusion matrices",
+          "axes": { "x": "True Label", "y": "Predicted Label" },
+          "files": [
+            "/plots/taucp-ml/results/decay_mode_confusion_counts.png",
+            "/plots/taucp-ml/results/decay_mode_confusion_normalized.png"
           ]
         }
       ]

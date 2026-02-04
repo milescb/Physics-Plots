@@ -64,6 +64,17 @@ const { projectName, subpageName, plots, backLink } = Astro.props;
     <div class="modal-content">
       <div class="modal-header">
         <h2 id="modal-title"></h2>
+        <div class="pdf-grid-controls" id="pdf-grid-controls" style="display: none;">
+          <label for="pdf-grid-cols">Columns:</label>
+          <select id="pdf-grid-cols">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4" selected>4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+        </div>
         <button id="modal-close" aria-label="Close modal">×</button>
       </div>
       <div class="modal-body">

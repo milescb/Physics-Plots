@@ -11,6 +11,8 @@ const canvas = document.getElementById('pdf-canvas');
 const pageInfo = document.getElementById('page-info');
 const prevBtn = document.getElementById('prev-page');
 const nextBtn = document.getElementById('next-page');
+const pdfGridControls = document.getElementById('pdf-grid-controls');
+const pdfGridColsSelect = document.getElementById('pdf-grid-cols');
 
 let pdfDoc = null;
 let currentPage = 1;
@@ -63,6 +65,14 @@ modalClose?.addEventListener('click', closeModal);
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape' && modal?.classList.contains('active')) {
     closeModal();
+  }
+});
+
+// PDF Grid column selector
+pdfGridColsSelect?.addEventListener('change', (e) => {
+  const cols = e.target.value;
+  if (pdfGridContainer && pdfGridContainer.classList.contains('multi-pdf-grid')) {
+    pdfGridContainer.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
   }
 });
 
@@ -153,6 +163,9 @@ async function loadGridLayoutPDFs(gridLayout) {
 async function loadMultiplePDFs(urls) {
   if (!pdfGridContainer) return;
 
+  // Show grid controls for multi-PDF view
+  if (pdfGridControls) pdfGridControls.style.display = 'flex';
+
   // Hide page controls for multi-PDF view
   if (pageInfo) pageInfo.style.display = 'none';
   if (prevBtn) prevBtn.style.display = 'none';
@@ -161,6 +174,7 @@ async function loadMultiplePDFs(urls) {
   // Clear container and set it up for grid display
   pdfGridContainer.innerHTML = '';
   pdfGridContainer.className = 'multi-pdf-grid';
+  pdfGridContainer.style.gridTemplateColumns = `repeat(${pdfGridColsSelect?.value || 4}, 1fr)`;
 
   // Load and render each PDF
   for (const url of urls) {
@@ -210,6 +224,9 @@ async function loadPDF(url) {
   if (pageInfo) pageInfo.style.display = '';
   if (prevBtn) prevBtn.style.display = '';
   if (nextBtn) nextBtn.style.display = '';
+
+  // Hide grid controls for single-PDF view
+  if (pdfGridControls) pdfGridControls.style.display = 'none';
 
   // Reset container for single canvas
   pdfGridContainer.className = '';

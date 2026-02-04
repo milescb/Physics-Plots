@@ -120,6 +120,7 @@ h1 {
   align-items: center;
   padding: 1.5rem;
   border-bottom: 1px solid var(--color-border);
+  gap: 1rem;
 }
 
 .modal-header h2 {
@@ -170,6 +171,7 @@ h1 {
   gap: 1rem;
   padding: 1rem;
   margin-top: 1rem;
+  flex-wrap: wrap;
 }
 
 .pdf-controls button {
@@ -195,6 +197,39 @@ h1 {
 #page-info {
   font-size: 0.9rem;
   color: var(--color-text-muted);
+}
+
+.pdf-grid-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.pdf-grid-controls label {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.pdf-grid-controls select {
+  padding: 0.4rem 0.6rem;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.pdf-grid-controls select:hover {
+  border-color: var(--color-primary);
+}
+
+.pdf-grid-controls select:focus {
+  outline: none;
+  border-color: var(--color-primary);
 }
 
 /* PDF Grid Container Styles */

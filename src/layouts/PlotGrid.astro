@@ -1,0 +1,83 @@
+---
+import Base from './Base.astro';
+import '../styles/plot-grid.css';
+
+interface Props {
+  projectName: string;
+  subpageName: string;
+  plots: Array<{
+    id: string;
+    title: string;
+    description: string;
+    axes: { x: string; y: string };
+    file?: string;
+    files?: string[];
+    gridLayout?: {
+      rowHeader: string;
+      colHeader: string;
+      rows: string[];
+      cols: string[];
+      files: string[][];
+    };
+  }>;
+  backLink: string;
+}
+
+const { projectName, subpageName, plots, backLink } = Astro.props;
+---
+
+<Base title={`${projectName} - ${subpageName}`}>
+  <div class="container">
+    <header>
+      <a href={backLink} class="back-link">← Back to {projectName}</a>
+      <h1>{subpageName}</h1>
+    </header>
+
+    <div class="plot-grid">
+      {plots.map((plot) => (
+        <button 
+          class="plot-card" 
+          data-plot-id={plot.id}
+          data-plot-file={plot.file}
+          data-plot-files={plot.files ? JSON.stringify(plot.files) : undefined}
+          data-plot-grid-layout={plot.gridLayout ? JSON.stringify(plot.gridLayout) : undefined}
+          data-plot-title={plot.title}
+          data-plot-description={plot.description}
+          data-plot-axes={JSON.stringify(plot.axes)}
+        >
+          <div class="plot-card-content">
+            <h3>{plot.title}</h3>
+            <p class="description">{plot.description}</p>
+            <div class="axes">
+              <span class="axis">x: {plot.axes.x}</span>
+              <span class="axis">y: {plot.axes.y}</span>
+            </div>
+          </div>
+        </button>
+      ))}
+    </div>
+  </div>
+
+  <!-- Modal for PDF display -->
+  <div id="plot-modal" class="modal">
+    <div class="modal-backdrop"></div>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 id="modal-title"></h2>
+        <button id="modal-close" aria-label="Close modal">×</button>
+      </div>
+      <div class="modal-body">
+        <div id="pdf-grid-container">
+          <canvas id="pdf-canvas"></canvas>
+        </div>
+        <div class="pdf-controls">
+          <button id="prev-page">← Previous</button>
+          <span id="page-info"></span>
+          <button id="next-page">Next →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="/scripts/plot-grid.js"></script>
+</Base>

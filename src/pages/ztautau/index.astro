@@ -1,0 +1,38 @@
+---
+import Base from '../../layouts/Base.astro';
+import plotsData from '../../data/plots.json';
+import '../../styles/index.css'
+
+const project = plotsData.projects.find(p => p.id === 'ztautau');
+if (!project) throw new Error('Project not found');
+---
+
+<Base title={project.name}>
+  <div class="container">
+    <header>
+      <a href="/" class="back-link">← All Projects</a>
+      <h1>{project.name}</h1>
+      <p class="description">{project.description}</p>
+    </header>
+
+    <div class="subpages-grid">
+      {project.subpages.map((subpage) => (
+        <a href={`/ztautau/${subpage.id}`} class="subpage-card">
+          <h2>{subpage.name}</h2>
+          <div class="plot-count">
+            {subpage.plots.length} plot{subpage.plots.length !== 1 ? 's' : ''}
+          </div>
+          <div class="plot-preview">
+            {subpage.plots.slice(0, 3).map(plot => (
+              <span class="plot-tag">{plot.title}</span>
+            ))}
+            {subpage.plots.length > 3 && (
+              <span class="plot-tag more">+{subpage.plots.length - 3} more</span>
+            )}
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+
+</Base>

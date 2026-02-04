@@ -1,0 +1,137 @@
+{
+  "projects": [
+    {
+      "id": "ztautau",
+      "name": "Ztautau Analysis",
+      "description": "Search for CP Violation in the Z to tau-tau system",
+      "subpages": [
+        {
+          "id": "background",
+          "name": "Background Modeling",
+          "plots": [
+            {
+              "id": "sr_plots",
+              "title": "Signal Region",
+              "description": "Resulting Modeling in Signal Region",
+              "axes": { "x": "vars", "y": "Events" },
+              "files": [
+                "/plots/ztautau/background/sr_plots/plot_tau_pt_mu1p1n_18_SR_OS_medium_single_mu.pdf",
+                "/plots/ztautau/background/sr_plots/plot_tau_eta_mu1p1n_18_SR_OS_medium_single_mu.pdf",
+                "/plots/ztautau/background/sr_plots/plot_lep_pt_mu1p1n_18_SR_OS_medium_single_mu.pdf",
+                "/plots/ztautau/background/sr_plots/plot_lep_eta_mu1p1n_18_SR_OS_medium_single_mu.pdf"
+              ]
+            },
+            {
+              "id": "wcr_plots",
+              "title": "W Control Region",
+              "description": "W+jets control region modeling",
+              "axes": { "x": "vars", "y": "Events" },
+              "files": [
+                "/plots/ztautau/background/wcr/plot_tau_pt_mu1p1n_18_WCR_OS_medium_single_mu.pdf",
+                "/plots/ztautau/background/wcr/plot_lep_pt_mu1p1n_18_WCR_OS_medium_single_mu.pdf",
+                "/plots/ztautau/background/wcr/plot_met_mu1p1n_18_WCR_OS_medium_single_mu.pdf",
+                "/plots/ztautau/background/wcr/plot_tau_upsilon_mu1p1n_18_WCR_OS_medium_single_mu.pdf",
+                "/plots/ztautau/background/wcr/plot_tau_eta_mu1p1n_18_WCR_OS_medium_single_mu.pdf",
+                "/plots/ztautau/background/wcr/plot_lep_eta_mu1p1n_18_WCR_OS_medium_single_mu.pdf",
+                "/plots/ztautau/background/wcr/plot_lephad_deta_mu1p1n_18_WCR_OS_medium_single_mu.pdf",
+                "/plots/ztautau/background/wcr/plot_psi_reco_mu1p1n_18_WCR_OS_medium_single_mu.pdf"
+              ]
+            },
+            {
+              "id": "qcdcr_plots",
+              "title": "QCD Control Region",
+              "description": "QCD multijet control region modeling",
+              "axes": { "x": "vars", "y": "Events" },
+              "files": [
+                "/plots/ztautau/background/qcd_cr/plot_tau_pt_mu1p1n_18_QCDCR_OS_medium_single_mu.pdf",
+                "/plots/ztautau/background/qcd_cr/plot_lep_pt_mu1p1n_18_QCDCR_OS_medium_single_mu.pdf",
+                "/plots/ztautau/background/qcd_cr/plot_met_mu1p1n_18_QCDCR_OS_medium_single_mu.pdf",
+                "/plots/ztautau/background/qcd_cr/plot_tau_upsilon_mu1p1n_18_QCDCR_OS_medium_single_mu.pdf",
+                "/plots/ztautau/background/qcd_cr/plot_tau_eta_mu1p1n_18_QCDCR_OS_medium_single_mu.pdf",
+                "/plots/ztautau/background/qcd_cr/plot_lep_eta_mu1p1n_18_QCDCR_OS_medium_single_mu.pdf",
+                "/plots/ztautau/background/qcd_cr/plot_lephad_deta_mu1p1n_18_QCDCR_OS_medium_single_mu.pdf",
+                "/plots/ztautau/background/qcd_cr/plot_psi_reco_mu1p1n_18_QCDCR_OS_medium_single_mu.pdf"
+              ]
+            },
+            {
+              "id": "fits-barrel",
+              "title": "High-mass region W/QCD fits - Barrel",
+              "description": "Binned signal fits in barrel region",
+              "axes": { "x": "Lepton pT", "y": "Tau pT" },
+              "gridLayout": {
+                "rowHeader": "",
+                "colHeader": "",
+                "rows": ["27 < Pt(lep) < 35", "35 < Pt(lep) < 45", "Pt(lep) ≥ 45"],
+                "cols": ["25 < Pt(tau) < 30", "30 < Pt(tau) < 35", "35 < Pt(tau) < 45", "Pt(tau) ≥ 45"],
+                "files": [
+                  [
+                    "/plots/ztautau/background/fits/SR_OS_taupt_2530_leppt_2735_highmass_barrel_fit.pdf",
+                    "/plots/ztautau/background/fits/SR_OS_taupt_3035_leppt_2735_highmass_barrel_fit.pdf",
+                    "/plots/ztautau/background/fits/SR_OS_taupt_3545_leppt_2735_highmass_barrel_fit.pdf",
+                    "/plots/ztautau/background/fits/SR_OS_taupt_ge45_leppt_2735_highmass_barrel_fit.pdf"
+                  ],
+                  [
+                    "/plots/ztautau/background/fits/SR_OS_taupt_2530_leppt_3545_highmass_barrel_fit.pdf",
+                    "/plots/ztautau/background/fits/SR_OS_taupt_3035_leppt_3545_highmass_barrel_fit.pdf",
+                    "/plots/ztautau/background/fits/SR_OS_taupt_3545_leppt_3545_highmass_barrel_fit.pdf",
+                    "/plots/ztautau/background/fits/SR_OS_taupt_ge45_leppt_3545_highmass_barrel_fit.pdf"
+                  ],
+                  [
+                    "/plots/ztautau/background/fits/SR_OS_taupt_2530_leppt_ge45_highmass_barrel_fit.pdf",
+                    "/plots/ztautau/background/fits/SR_OS_taupt_3035_leppt_ge45_highmass_barrel_fit.pdf",
+                    "/plots/ztautau/background/fits/SR_OS_taupt_3545_leppt_ge45_highmass_barrel_fit.pdf",
+                    "/plots/ztautau/background/fits/SR_OS_taupt_ge45_leppt_ge45_highmass_barrel_fit.pdf"
+                  ]
+                ]
+              }
+            },
+            {
+              "id": "fits-endcap",
+              "title": "High-mass region W/QCD fits - Endcap",
+              "description": "Binned signal fits in endcap region",
+              "axes": { "x": "Lepton pT", "y": "Tau pT" },
+              "gridLayout": {
+                "rowHeader": "",
+                "colHeader": "",
+                "rows": ["27 < Pt(lep) < 35", "35 < Pt(lep) < 45", "Pt(lep) ≥45"],
+                "cols": ["25 < Pt(tau) < 30", "30 < Pt(tau) < 35", "35 < Pt(tau) < 45", "Pt(tau) ≥45"],
+                "files": [
+                  [
+                    "/plots/ztautau/background/fits/SR_OS_taupt_2530_leppt_2735_highmass_endcap_fit.pdf",
+                    "/plots/ztautau/background/fits/SR_OS_taupt_3035_leppt_2735_highmass_endcap_fit.pdf",
+                    "/plots/ztautau/background/fits/SR_OS_taupt_3545_leppt_2735_highmass_endcap_fit.pdf",
+                    "/plots/ztautau/background/fits/SR_OS_taupt_ge45_leppt_2735_highmass_endcap_fit.pdf"
+                  ],
+                  [
+                    "/plots/ztautau/background/fits/SR_OS_taupt_2530_leppt_3545_highmass_endcap_fit.pdf",
+                    "/plots/ztautau/background/fits/SR_OS_taupt_3035_leppt_3545_highmass_endcap_fit.pdf",
+                    "/plots/ztautau/background/fits/SR_OS_taupt_3545_leppt_3545_highmass_endcap_fit.pdf",
+                    "/plots/ztautau/background/fits/SR_OS_taupt_ge45_leppt_3545_highmass_endcap_fit.pdf"
+                  ],
+                  [
+                    "/plots/ztautau/background/fits/SR_OS_taupt_2530_leppt_ge45_highmass_endcap_fit.pdf",
+                    "/plots/ztautau/background/fits/SR_OS_taupt_3035_leppt_ge45_highmass_endcap_fit.pdf",
+                    "/plots/ztautau/background/fits/SR_OS_taupt_3545_leppt_ge45_highmass_endcap_fit.pdf",
+                    "/plots/ztautau/background/fits/SR_OS_taupt_ge45_leppt_ge45_highmass_endcap_fit.pdf"
+                  ]
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": "systematics",
+          "name": "Systematic Uncertainties",
+          "plots": [
+          ]
+        },
+        {
+          "id": "fits",
+          "name": "Signal Fits",
+          "plots": [
+          ]
+        }
+      ]
+    }
+  ]
+}

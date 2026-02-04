@@ -1,0 +1,18 @@
+---
+import PlotGrid from '../../layouts/PlotGrid.astro';
+import plotsData from '../../data/plots.json';
+
+const project = plotsData.projects.find(p => p.id === 'ztautau');
+const subpage = project?.subpages.find(s => s.id === 'background');
+
+if (!project || !subpage) throw new Error('Page not found');
+---
+
+<PlotGrid
+  projectName={project.name}
+  subpageName={subpage.name}
+  plots={subpage.plots}
+  backLink="/ztautau"
+/>
+
+<!-- 2D, SS, split by barrel and end-cap  -->

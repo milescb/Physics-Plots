@@ -1,0 +1,37 @@
+---
+import Base from '../layouts/Base.astro';
+import plotsData from '../data/plots.json';
+import '../styles/index.css';
+
+const { projects } = plotsData;
+---
+
+<Base title="Physics Analysis Plots">
+  <div class="container">
+    <header>
+      <h1>Physics Analysis</h1>
+      <p class="subtitle">Interactive plot viewer for analysis results</p>
+    </header>
+
+    <div class="projects-grid">
+      {projects.map((project) => (
+        <a href={`/${project.id}`} class="project-card">
+          <div class="project-header">
+            <h2>{project.name}</h2>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </div>
+          <p class="project-description">{project.description}</p>
+          <div class="project-meta">
+            <span>{project.subpages.length} analysis sections</span>
+            <span>
+              {project.subpages.reduce((sum, sp) => sum + sp.plots.length, 0)} plots
+            </span>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+
+</Base>

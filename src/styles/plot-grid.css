@@ -1,0 +1,278 @@
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+header {
+  margin-bottom: 3rem;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  opacity: 0.8;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: linear-gradient(to right, var(--color-primary), var(--color-primary-hover));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.plot-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+.plot-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: left;
+  width: 100%;
+  box-shadow: var(--shadow);
+}
+
+.plot-card:hover {
+  background: var(--color-surface-hover);
+  border-color: var(--color-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 12px -2px rgb(0 0 0 / 0.4);
+}
+
+.plot-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-text);
+}
+
+.description {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.axes {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.85rem;
+  font-family: 'Courier New', monospace;
+}
+
+.axis {
+  background: var(--color-bg);
+  padding: 0.25rem 0.75rem;
+  border-radius: 6px;
+  color: var(--color-primary);
+}
+
+/* Modal styles */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+}
+
+.modal.active {
+  display: block;
+}
+
+.modal-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(4px);
+}
+
+.modal-content {
+  position: relative;
+  width: 90%;
+  max-width: 1200px;
+  height: 90%;
+  margin: 2.5vh auto;
+  background: var(--color-surface);
+  border-radius: var(--radius);
+  border: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.5);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.modal-header h2 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+#modal-close {
+  background: none;
+  border: none;
+  color: var(--color-text);
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+#modal-close:hover {
+  background: var(--color-surface-hover);
+}
+
+.modal-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  overflow: auto;
+}
+
+#pdf-canvas {
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+  border-radius: 8px;
+}
+
+.pdf-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.pdf-controls button {
+  background: var(--color-primary);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-size: 0.9rem;
+}
+
+.pdf-controls button:hover {
+  background: var(--color-primary-hover);
+}
+
+.pdf-controls button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+#page-info {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+/* PDF Grid Container Styles */
+#pdf-grid-container {
+  width: 100%;
+}
+
+#pdf-grid-container.multi-pdf-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0rem;
+}
+
+#pdf-grid-container.table-grid {
+  display: grid;
+  gap: 0.0rem;
+  align-items: center;
+  position: relative;
+}
+
+/* Grid Layout Headers */
+.grid-corner-cell {
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px;
+  color: #9ca3af;
+  padding: 0.5rem;
+}
+
+.grid-col-header {
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px;
+  color: #e5e7eb;
+  padding: 0.5rem;
+}
+
+.grid-row-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 14px;
+  color: #e5e7eb;
+  padding: 0.0rem;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
+.grid-row-header-label {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%) rotate(-90deg);
+  font-weight: bold;
+  font-size: 14px;
+  color: #9ca3af;
+  white-space: nowrap;
+}
+
+/* PDF Canvas Styles */
+.pdf-canvas {
+  width: 100%;
+}
+
+.pdf-canvas-single {
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+  border-radius: 8px;
+}
+
+/* Error Canvas Styles */
+.pdf-error {
+  background: #1a1a24;
+}
+
+.pdf-placeholder {
+  background: #1a1a24;
+}

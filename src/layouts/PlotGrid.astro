@@ -93,7 +93,7 @@ const { projectName, subpageName, plots, backLink } = Astro.props;
   <script type="module" src="/scripts/plot-grid.js" is:inline></script>
   <script>
     // Set default columns based on screen size
-    const pdfGridColsSelect = document.getElementById('pdf-grid-cols');
+    const pdfGridColsSelect = document.getElementById('pdf-grid-cols') as HTMLSelectElement | null;
     if (pdfGridColsSelect) {
       const isMobile = window.innerWidth < 768;
       pdfGridColsSelect.value = isMobile ? '1' : '4';

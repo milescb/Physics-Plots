@@ -5,7 +5,7 @@ import ztautauConfig from '../data/ztautau.json';
 import taucpmlConfig from '../data/taucp-ml.json';
 import '../styles/index.css';
 
-const configMap = {
+const configMap: Record<string, typeof ztautauConfig | typeof taucpmlConfig> = {
   'ztautau': ztautauConfig,
   'taucp-ml': taucpmlConfig
 };
@@ -36,7 +36,7 @@ const projects = plotsData.projects.map((project) => ({
           <div class="project-meta">
             <span>{project.subpages.length} categories</span>
             <span>
-              {project.subpages.reduce((sum, sp) => sum + sp.plots.length, 0)} plot books
+              {project.subpages.reduce((sum: number, sp: any) => sum + sp.plots.length, 0)} plot books
             </span>
           </div>
         </a>

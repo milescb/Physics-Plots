@@ -1,9 +1,9 @@
 ---
 import PlotGrid from '../../layouts/PlotGrid.astro';
-import plotsData from '../../data/plots.json';
+import ztautauConfig from '../../data/ztautau.json';
 
-const project = plotsData.projects.find(p => p.id === 'ztautau');
-const subpage = project?.subpages.find(s => s.id === 'systematics');
+const project = ztautauConfig;
+const subpage = project.subpages.find(s => s.id === 'systematics');
 
 if (!project || !subpage) throw new Error('Page not found');
 ---

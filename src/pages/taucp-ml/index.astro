@@ -1,15 +1,15 @@
 ---
 import Base from '../../layouts/Base.astro';
 import plotsData from '../../data/projects.json';
-import ztautauConfig from '../../data/ztautau.json';
+import taucpmlConfig from '../../data/taucp-ml.json';
 import '../../styles/index.css'
 
-const projectMeta = plotsData.projects.find(p => p.id === 'ztautau');
+const projectMeta = plotsData.projects.find(p => p.id === 'taucp-ml');
 if (!projectMeta) throw new Error('Project not found');
 
 const project = {
   ...projectMeta,
-  subpages: ztautauConfig.subpages
+  subpages: taucpmlConfig.subpages
 };
 ---
 
@@ -23,7 +23,7 @@ const project = {
 
     <div class="subpages-grid">
       {project.subpages.map((subpage) => (
-        <a href={`/ztautau/${subpage.id}`} class="subpage-card">
+        <a href={`/taucp-ml/${subpage.id}`} class="subpage-card">
           <h2>{subpage.name}</h2>
           <div class="plot-count">
             {subpage.plots.length} plot book{subpage.plots.length !== 1 ? 's' : ''}

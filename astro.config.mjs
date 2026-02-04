@@ -4,11 +4,14 @@ import cloudflare from '@astrojs/cloudflare';
 
 export default defineConfig({
   output: 'static',
-  site: 'https://your-site.pages.dev',
+  site: 'https://plots.milescb.com',
   adapter: cloudflare(),
   image: {
     service: {
-      entrypoint: 'astro/assets/services/compile'
+      entrypoint: 'astro/services/sharp',
+      config: {
+        mode: 'compile'
+      }
     }
-  }
+  },
 });

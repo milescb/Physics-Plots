@@ -1,16 +1,26 @@
 ---
 import Base from '../layouts/Base.astro';
-import plotsData from '../data/plots.json';
+import plotsData from '../data/projects.json';
+import ztautauConfig from '../data/ztautau.json';
+import taucpmlConfig from '../data/taucp-ml.json';
 import '../styles/index.css';
 
-const { projects } = plotsData;
+const configMap = {
+  'ztautau': ztautauConfig,
+  'taucp-ml': taucpmlConfig
+};
+
+const projects = plotsData.projects.map((project) => ({
+  ...project,
+  subpages: configMap[project.id].subpages
+}));
 ---
 
 <Base title="Physics Analysis Plots">
   <div class="container">
     <header>
-      <h1>Physics Analysis</h1>
-      <p class="subtitle">Interactive plot viewer for analysis results</p>
+      <h1>Physics Project Plots</h1>
+      <p class="subtitle">Interactive plot viewer for analysis results and algorithm development</p>
     </header>
 
     <div class="projects-grid">
@@ -24,9 +34,9 @@ const { projects } = plotsData;
           </div>
           <p class="project-description">{project.description}</p>
           <div class="project-meta">
-            <span>{project.subpages.length} analysis sections</span>
+            <span>{project.subpages.length} categories</span>
             <span>
-              {project.subpages.reduce((sum, sp) => sum + sp.plots.length, 0)} plots
+              {project.subpages.reduce((sum, sp) => sum + sp.plots.length, 0)} plot books
             </span>
           </div>
         </a>

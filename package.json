@@ -10,11 +10,12 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/cloudflare": "^12.6.12",
+    "@astrojs/cloudflare": "^12.6.5",
     "astro": "^5.17.1",
     "node-addon-api": "^8.5.0",
     "node-gyp": "^12.2.0",
-    "pdfjs-dist": "^4.0.379"
+    "pdfjs-dist": "^4.0.379",
+    "sharp": "^0.34.5"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.2",

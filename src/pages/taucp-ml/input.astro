@@ -1,9 +1,9 @@
 ---
 import PlotGrid from '../../layouts/PlotGrid.astro';
-import ztautauConfig from '../../data/ztautau.json';
+import taucpmlConfig from '../../data/taucp-ml.json';
 
-const project = ztautauConfig;
-const subpage = project.subpages.find(s => s.id === 'background-split');
+const project = taucpmlConfig;
+const subpage = project.subpages.find(s => s.id === 'input');
 
 if (!project || !subpage) throw new Error('Page not found');
 ---
@@ -12,5 +12,5 @@ if (!project || !subpage) throw new Error('Page not found');
   projectName={project.name}
   subpageName={subpage.name}
   plots={subpage.plots}
-  backLink="/ztautau"
+  backLink="/taucp-ml"
 />

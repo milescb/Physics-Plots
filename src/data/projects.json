@@ -1,0 +1,17 @@
+{
+  "projects": [
+    {
+      "id": "ztautau",
+      "name": "Ztautau Analysis",
+      "description": "Search for CP Violation in the Z to tau-tau system",
+      "configFile": "/data/ztautau.json"
+    },
+    {
+      "id": "taucp-ml",
+      "name": "TauCP Machine Learning",
+      "description": "Transformer-based machine learning model for TauCP tasks",
+      "configFile": "/data/taucp-ml.json"
+    }
+  ]
+}
+

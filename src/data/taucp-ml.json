@@ -1,0 +1,77 @@
+{
+  "id": "ztautau",
+  "name": "Ztautau Analysis",
+  "description": "Search for CP Violation in the Z to tau-tau system",
+  "subpages": [
+  {
+    "id": "input",
+    "name": "Network Input Distributions",
+    "plots": 
+      [
+        {
+          "id": "track-feats",
+          "title": "Track Features",
+          "description": "Track Feature Inputs",
+          "axes": { "x": "vars", "y": "Events" },
+          "files": [
+          ]
+        },
+        {
+          "id": "cluster-feats",
+          "title": "Cluster Features",
+          "description": "Cluster Feature Inputs",
+          "axes": { "x": "vars", "y": "Events" },
+          "files": [
+          ]
+        },
+        {
+          "id": "track-feats-decay",
+          "title": "Track Features by Decay Mode",
+          "description": "Track features split by decay mode",
+          "axes": { "x": "vars", "y": "Events" },
+          "files": [
+          ]
+        },
+        {
+          "id": "cluster-feats-decay",
+          "title": "Cluster Features by Decay Mode",
+          "description": "Cluster features split by decay mode",
+          "axes": { "x": "vars", "y": "Events" },
+          "files": [
+          ]
+        }
+      ]
+    },
+    {
+      "id": "results",
+      "name": "Network Outputs",
+      "plots": 
+      [
+        {
+          "id": "tauid",
+          "title": "TauID",
+          "description": "TauID output distributions and ROC curves",
+          "axes": { "x": "vars", "y": "Events" },
+          "files": [
+          ]
+        },
+        {
+          "id": "eleveto",
+          "title": "Electron Veto",
+          "description": "Electron veto distributions and ROC curves",
+          "axes": { "x": "vars", "y": "Events" },
+          "files": [
+          ]
+        },
+        {
+          "id": "decay-mode",
+          "title": "Decay Mode",
+          "description": "Decay mode confusion matrices and ROC curves",
+          "axes": { "x": "vars", "y": "Events" },
+          "files": [
+          ]
+        }
+      ]
+    }
+  ]
+}

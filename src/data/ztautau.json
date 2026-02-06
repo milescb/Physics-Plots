@@ -8,6 +8,24 @@
       "name": "Background Modeling",
       "plots": [
         {
+          "id": "psi",
+          "title": "Psi",
+          "description": "Psi in data for each control region",
+          "axes": { "x": "psi", "y": "Events"},
+          "files": [
+            "/plots/ztautau/background/psi_plots/plot_psi_reco_mu1p1n_18_QCDCR_OS_anti_ID_medium_single_mu.pdf",
+            "/plots/ztautau/background/psi_plots/plot_psi_reco_mu1p1n_18_QCDCR_OS_medium_single_mu.pdf",
+            "/plots/ztautau/background/psi_plots/plot_psi_reco_mu1p1n_18_QCDCR_SS_anti_ID_medium_single_mu.pdf",
+            "/plots/ztautau/background/psi_plots/plot_psi_reco_mu1p1n_18_QCDCR_SS_medium_single_mu.pdf",
+            "/plots/ztautau/background/psi_plots/plot_psi_reco_mu1p1n_18_WCR_OS_anti_ID_medium_single_mu.pdf",
+            "/plots/ztautau/background/psi_plots/plot_psi_reco_mu1p1n_18_WCR_OS_medium_single_mu.pdf",
+            "/plots/ztautau/background/psi_plots/plot_psi_reco_mu1p1n_18_WCR_SS_anti_ID_medium_single_mu.pdf",
+            "/plots/ztautau/background/psi_plots/plot_psi_reco_mu1p1n_18_WCR_SS_medium_single_mu.pdf",
+            "/plots/ztautau/background/psi_plots/plot_psi_reco_mu1p1n_18_SR_OS_anti_ID_medium_single_mu.pdf",
+            "/plots/ztautau/background/psi_plots/plot_psi_reco_mu1p1n_18_SR_SS_medium_single_mu.pdf"
+          ]
+        },
+        {
           "id": "sr_plots",
           "title": "Signal Region",
           "description": "Resulting Modeling in Signal Region",
